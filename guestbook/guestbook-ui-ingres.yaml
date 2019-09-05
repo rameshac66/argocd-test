@@ -4,10 +4,10 @@ metadata:
   name: my-ingress
 spec:
   backend:
-    serviceName: other
+    serviceName: guestbook-ui
     servicePort: 8080
   rules:
-  - host: guest.k8stest-f5f2b5c1.hcp.eastus.azmk8s.io
+  - host: k8stest-f5f2b5c1.hcp.eastus.azmk8s.io
     http:
       paths:
       - backend:
