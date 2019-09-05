@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  backend:
+    serviceName: other
+    servicePort: 8080
+  rules:
+  - host: guest.k8stest-f5f2b5c1.hcp.eastus.azmk8s.io
+    http:
+      paths:
+      - backend:
+          serviceName: guestbook-ui
+          servicePort: 80
+  
