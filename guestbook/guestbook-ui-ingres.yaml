@@ -2,15 +2,11 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: my-ingress
-spec:
-  backend:
-    serviceName: guestbook-ui
-    servicePort: 80
   rules:
-  - host: guestbook.aks.local
     http:
       paths:
+      path: - /guestbook-ui
       - backend:
-          serviceName: guestbook-ui
+          serviceName: guestbook-ui-1
           servicePort: 80
   
