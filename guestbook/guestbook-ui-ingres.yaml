@@ -5,9 +5,9 @@ metadata:
 spec:
   backend:
     serviceName: guestbook-ui
-    servicePort: 8080
+    servicePort: 80
   rules:
-  - host: k8stest-f5f2b5c1.hcp.eastus.azmk8s.io
+  - host: guestbook.aks.local
     http:
       paths:
       - backend:
